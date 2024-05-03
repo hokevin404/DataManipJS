@@ -46,11 +46,11 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 // Check if all numbers are divisible by 5. Cache the result in a variable.
 const isMod5 = (n1 % 5) && (n2 % 5) && (n3 % 5) && (n4 % 5);
-console.log(isMod5);
+console.log(`Are all variables divisible by 5: ` + isMod5);
 
 // Check if the first number is larger than the last. Cache the result in a variable.
-const isLargerThanLast = (n1 > n2) && (n2 > n3) && (n3 > n4);
-console.log(isLargerThanLast);
+const isLargerThanLast = (n1 > n4);
+console.log(`Is n1 > n4: ` + isLargerThanLast);
 
 // Accomplish the following arithmetic chain:
 //    Subtract the first number from the second number.
@@ -59,10 +59,13 @@ console.log(isLargerThanLast);
 let numOne = n2 - n1;
 let numTwo = numOne * n3;
 let numThree = numTwo % n4;
+let num = (((n2 - n1) * n3) % n4);
+console.log(`Arithmetic chain result: ` + num)
 
 // Change the way that isOver25 calculates so that we do not need to use the NOT 
 // operator (!) in other logic comparisons. Rename the variable as appropriate.
-
+const isUnder25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
+console.log(`Are all numbers under 25: ` + isUnder25)
 
 /*
 Part 2: Practical Math
